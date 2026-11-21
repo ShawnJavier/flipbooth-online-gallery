@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en-AU">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f5f0">
+    <meta name="description" content="A collection of beautiful FlipBooth event memories.">
+    <title>FlipBooth | Event Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap header-inner">
+            <!-- <a class="brand" href="#top" aria-label="FlipBooth home">
+                <span class="brand-mark" aria-hidden="true">F</span>
+                <span class="brand-name">FLIPBOOTH</span>
+            </a> -->
+            <a href="#" class="brand-logo">
+                <img src="img/Flip_icon-brown.png"  alt="FlipBooth">
+            </a>
+            <span class="header-note">PHOTOBOOTH HIRE IN ADELAIDE</span>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="event-title">
+            <p class="eyebrow">A collection of moments</p>
+            <h1 id="event-title">Your Event</h1>
+            <p class="date" id="event-date"></p>
+            <p class="welcome">Thank you for celebrating with us. Your memories are ready to view.</p>
+            <div class="rule" aria-hidden="true"></div>
+        </section>
+
+        <section class="gallery wrap" aria-label="Event photos">
+            <div class="toolbar">
+                <div class="tabs" role="tablist" aria-label="Photo type">
+                    <button class="tab" id="tab-originals" role="tab" aria-selected="true" aria-controls="photo-grid" data-kind="originals">
+                        Single Photos <span class="count" id="originals-count"></span>
+                    </button>
+                    <button class="tab" id="tab-prints" role="tab" aria-selected="false" aria-controls="photo-grid" data-kind="prints">
+                        Prints <span class="count" id="prints-count"></span>
+                    </button>
+                </div>
+                <span class="status" id="gallery-status" aria-live="polite"></span>
+            </div>
+
+            <div class="grid" id="photo-grid" role="tabpanel" aria-labelledby="tab-originals"></div>
+        </section>
+
+        
+        <!-- SOCIAL MEDIA PROMO -->
+        <section class="social-promo">
+            <div class="social-promo-inner">
+
+                <span class="social-heart">♡</span>
+
+                <h2>Share the Love</h2>
+
+                <p>
+                    Sharing your FlipBooth moments? We'd love to see them!
+                    Tag us when you post your photos and follow us for more beautiful memories.
+                </p>
+
+                <div class="social-links">
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/flipbooth_adl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                    aria-label="Follow FlipBooth on Instagram">
+
+                        <svg class="social-icon instagram-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="5"
+                                stroke="currentColor" stroke-width="1.8"/>
+                            <circle cx="12" cy="12" r="4"
+                                    stroke="currentColor" stroke-width="1.8"/>
+                            <circle cx="17.5" cy="6.5" r="1.2"
+                                    fill="currentColor"/>
+                        </svg>
+
+                        <span>Instagram</span>
+                        <small>@flipbooth_adl</small>
+                    </a>
+
+                    <!-- FACEBOOK -->
+                    <a href="https://www.facebook.com/FlipBoothAdl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                    aria-label="Follow FlipBooth on Facebook">
+
+                        <svg class="social-icon facebook-icon"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor"
+                                d="M13.5 21v-8h2.7l.4-3h-3.1V8.1
+                                c0-.9.3-1.5 1.6-1.5h1.7V4
+                                c-.3 0-1.3-.1-2.4-.1
+                                -2.4 0-4 1.5-4 4.2V10H7.7v3h2.7v8
+                                H13.5z"/>
+                        </svg>
+
+                        <span>Facebook</span>
+                        <small>FlipBooth Adelaide</small>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">FLIPBOOTH</div>
+        <p class="slogan">Flip the moment.</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+        <button class="icon close" id="close" aria-label="Close photo viewer">×</button>
+        <button class="icon prev" id="prev" aria-label="Previous photo">‹</button>
+
+        <figure>
+            <img class="viewer-image" id="viewer-image" alt="">
+            <figcaption class="caption" id="caption"></figcaption>
+        </figure>
+
+        <button class="icon next" id="next" aria-label="Next photo">›</button>
+
+        <div class="actions">
+            <button class="download" id="download">
+                <span aria-hidden="true">↓</span> Download photo
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
